@@ -1,5 +1,5 @@
 {
-  "name": "vuejs-datepicker",
+  "name": "@ringit/vuejs-datepicker",
   "version": "1.6.2",
   "description": "A simple Vue.js datepicker component. Supports disabling of dates, inline mode, translations",
   "keywords": [
@@ -16,12 +16,15 @@
     "dist"
   ],
   "author": "Charlie Kassel <ck@charliekassel.com>",
+  "contributors": [
+    "Mihhail Verhovtsov <mihhail.verhovtsov@ringit.ee> (https://ringit.ee)"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/charliekassel/vuejs-datepicker"
+    "url": "https://github.com/ringit/vuejs-datepicker"
   },
   "bugs": {
-    "url": "https://github.com/charliekassel/vuejs-datepicker/issues"
+    "url": "https://github.com/ringit/vuejs-datepicker/issues"
   },
   "private": false,
   "license": "MIT",

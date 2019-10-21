@@ -4,6 +4,7 @@
       :selectedDate="selectedDate"
       :resetTypedDate="resetTypedDate"
       :format="format"
+      :parse="parse"
       :translation="translation"
       :inline="inline"
       :id="id"
@@ -117,6 +118,14 @@ export default {
     format: {
       type: [String, Function],
       default: 'dd MMM yyyy'
+    },
+    /**
+     * Parsing function for typed date. Should always return a date.
+     * Invalid dates are represented by NaN time value. Falls back to Date constructor.
+     */
+    parse: {
+      type: Function,
+      default: s => new Date(s)
     },
     language: {
       type: Object,
@@ -391,7 +400,7 @@ export default {
      */
     setValue (date) {
       if (typeof date === 'string' || typeof date === 'number') {
-        let parsed = new Date(date)
+        let parsed = this.parse(date)
         date = isNaN(parsed.valueOf()) ? null : parsed
       }
       if (!date) {

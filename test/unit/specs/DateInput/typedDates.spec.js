@@ -9,10 +9,20 @@ describe('DateInput', () => {
     wrapper = shallow(DateInput, {
       propsData: {
         format: 'dd MMM yyyy',
+        parse: s => s === 'Special Day' ? new Date('2013-12-11') : new Date(s),
         translation: en,
         typeable: true
       }
     })
+  })
+
+  it('uses parse function', () => {
+    const input = wrapper.find('input')
+    wrapper.vm.input.value = 'Special Day'
+    input.trigger('keyup')
+    const date = new Date('2013-12-11')
+    expect(wrapper.emitted().typedDate).toBeDefined()
+    expect(wrapper.emitted().typedDate[0][0]).toEqual(date)
   })
 
   it('does not format the date when typed', () => {

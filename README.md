@@ -1,6 +1,13 @@
+> **_IMPORTANT:_**  This is a fork of the original [vuej-datepicker](https://github.com/charliekassel/vuejs-datepicker) (version 1.6.2) with added customizable parsing.
+>
+> We chose forking because we needed this feature added quickly. Also, the development on the original repository
+> seems to have stalled, so not sure that a PR would be accepted anytime soon. We made as few changes as 
+> possible, mostly related to the feature we have added and also the neccessary housekeeping. We do not intend to
+> actively maintain this project unless destiny calls us. If the original project becomes active, we will make a PR
+> with our changes. Thanks for reading this clarification!
+
 # Datepicker
 
-[![Travis Build](https://img.shields.io/travis/charliekassel/vuejs-datepicker.svg)](https://travis-ci.org/charliekassel/vuejs-datepicker)
 [![Version](https://img.shields.io/npm/v/vuejs-datepicker.svg)](https://www.npmjs.com/package/vuejs-datepicker)
 [![Coveralls github](https://img.shields.io/coveralls/github/charliekassel/vuejs-datepicker.svg)](https://coveralls.io/github/charliekassel/vuejs-datepicker?branch=master)
 [![Downloads](https://img.shields.io/npm/dm/vuejs-datepicker.svg)](https://www.npmjs.com/package/vuejs-datepicker)
@@ -123,6 +130,7 @@ Inline always open version
 | name                          | String          |             | Input name property                      |
 | id                            | String          |             | Input id                                 |
 | format                        | String\|Function| dd MMM yyyy | Date formatting string or function       |
+| parse                         | Function        | new Date(s) | Date parsing function for typeable mode  |
 | full-month-name               | Boolean         | false       | To show the full month name              |
 | language                      | Object          | en          | Translation for days and months          |
 | disabled-dates                | Object          |             | See below for configuration              |
